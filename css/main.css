@@ -1859,7 +1859,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #32ed14;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3203,13 +3203,4 @@ body {
   background-image: url("/images/background.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-.post {
-  opacity: 0.8;
-}
-.sidebar {
-  opacity: 0.8;
-}
-.header-inner {
-  opacity: 0.8;
 }

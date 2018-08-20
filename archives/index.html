@@ -320,9 +320,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/08/09/hello-world/" itemprop="url">
+            <a class="post-title-link" href="/2018/08/20/k-NearestNeighbor/" itemprop="url">
               
-                <span itemprop="name">Hello World</span>
+                <span itemprop="name">K-NearestNeighbor</span>
               
             </a>
         
@@ -330,9 +330,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-09T19:46:10+08:00"
-              content="2018-08-09" >
-          08-09
+              datetime="2018-08-20T22:32:08+08:00"
+              content="2018-08-20" >
+          08-20
         </time>
       </div>
 
@@ -407,6 +407,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
 
           </nav>
 
@@ -442,12 +451,20 @@
             </div>
           
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28190175&auto=0&height=66"></iframe>
-
+<iframe frameborder="no"
+        border="0" 
+        marginwidth="0" 
+        marginheight="0" 
+        width=330 
+        height=86 
+        src="//music.163.com/outchain/player?type=2&id=28190175&auto=0&height=66">
+        </iframe>
+        
+         
 
           
           
-
+<!--
           
           
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
@@ -463,15 +480,70 @@
                 
               </ul>
             </div>
-          
+           -->
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-link"></i>
+              Links&nbsp;
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="" title="Title" target="_blank">Title</a>
+                </li>
+              
+            </ul>
+            <!--
+<div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("08/20/2018 6:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML=today;
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+-->
+          </div>
+                  
 
-  
-          
-
-        </div>
       </section>
 
       
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+      <h5 class="widget-title">Tag Cloud</h5>
+      <div id="myCanvasContainer" class="widget tagcloud">
+          <canvas width="220" height="220" id="resCanvas" style="width=100%">
+              <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">1</span></li></ul>
+          </canvas>
+      </div>
+      </div>
+        
+
 
       
 
@@ -1053,6 +1125,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

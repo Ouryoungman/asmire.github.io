@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F08%2F09%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[K-NearestNeighbor]]></title>
+    <url>%2F2018%2F08%2F20%2Fk-NearestNeighbor%2F</url>
+    <content type="text"><![CDATA[K-NearestNeighbor简介KNN算法是测量不同特征值之间的距离方法进行分类和回归的非参数统计方法，属于懒惰学习(lazy learning)中的一种。 在k-NN分类中，输出是一个分类族群。一个对象的分类是由其邻居的“多数表决”确定的，k个最近邻居（k为正整数，通常较小）中最常见的分类决定了赋予该对象的类别。若 k = 1，则该对象的类别直接由最近的一个节点赋予。 在k-NN回归中，输出是该对象的属性值。该值是其k个最近邻居的值的平均值。 优点 精度高 对异常值不敏感 无数据输入假定 缺点 计算复杂度高、空间复杂度高。时间复杂度为 O(n) 适用范围 该算法比较适用于样本容量比较大的类域的自动分类，而那些样本容量较小的类域采用这种算法比较容易产生误分。 数值型和标称型数据 注： 标称型：一般在有限的数据中取，而且只存在‘是’和‘否’两种不同的结果（一般用于分类）数值型：可以在无限的数据中取，而且数值比较具体化，例如4.02,6.23这种值（一般用于回归分析） 分类算法流程计算已知数据集中的点与当前点的距离12def classifyKNN(inX, dataSet, labels, k): diffMat = (np.tile(inx,(dataSet.shape[0],1)) - dataSet) ** 2 按照距离递增次序排序注: 这里使用欧式距离 12distance = (diffMat.sum(axis = 1)) ** 0.5sortedDistIndicies = distances.argsort() 注： x.argsort: 将x中的元素从小到大排列，提取其对应的index(索引)，然后输出到y。如 x = np.array([1,4,3,-1]), 则输出 array([3, 0, 2, 1]) 选取与当前点距离最小的k个点并统计类别频率12345classCount = &#123;&#125;for i in range(k): voteIlabel = labels[sortedDistIndicies[i]] #if label not in classCount,set 0,else it's count plus 1 classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1 返回前k个点频率最高的类别作为当前点的预测分类12sortedClassCount = sorted(classCount.iteritems(),key = operator.itemgetter(1), reverse = True)return sortedClassCount[0][0] 注: 迭代大数据字典时，如果是使用 items() 方法，那么在迭代之前，迭代器迭代前需要把数据完整地加载到内存，则会造成内存占用大。而 iteritem() 返回一个迭代器(iterators)，迭代器在迭代的时候，迭代元素逐个生成，减少了内存消耗。 分类完整代码123456789101112131415import numpy as npimport pandas as pdimport operator def KNNclassify(inx,dataSet,labels,k): diffMat = np.tile(inx, (dataSet.shape[0], 1)) - dataSet distances = ((diffMat**2).sum(axis = 1))**0.5 sortedDistIndicies = distances.argsort() classCount = &#123;&#125; for i in range(k): voteIlabel = labels[sortedDistIndicies[i]] #if voteIlabel not in classCount,set 0,else count plus 1 classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1 sortedClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse = True) return sortedClassCount[0][0]]]></content>
+      <tags>
+        <tag>Machine Learning</tag>
+      </tags>
   </entry>
 </search>
