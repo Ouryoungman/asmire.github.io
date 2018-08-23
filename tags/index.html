@@ -81,17 +81,14 @@
 
 
 
-<meta name="description" content="To be continued">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tags">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="Hyouka">
-<meta property="og:description" content="To be continued">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-20T15:10:38.705Z">
+<meta property="og:updated_time" content="2018-08-23T10:32:30.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tags">
-<meta name="twitter:description" content="To be continued">
 
 
 
@@ -150,7 +147,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
+ 
   
   
     
@@ -308,7 +305,7 @@
                 1 tag in total
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/Machine-Learning/" style="font-size: 12px; color: #ccc">Machine Learning</a>
+              <a href="/tags/Stat-ML/" style="font-size: 12px; color: #ccc">Stat ML</a>
             </div>
           </div>
         
@@ -328,17 +325,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
-  
-
-
 
         </div>
         
@@ -386,6 +372,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
 
             
               
@@ -431,15 +426,40 @@
                 
             </div>
           
+          
+         
+        
+        <div>
+            
+            
+          
+          <link rel="stylesheet" href="http://outayknla.bkt.clouddn.com/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="http://outayknla.bkt.clouddn.com/APlayer.min.js"></script>
 
-<iframe frameborder="no"
-        border="0" 
-        marginwidth="0" 
-        marginheight="0" 
-        width=330 
-        height=86 
-        src="//music.163.com/outchain/player?type=2&id=28190175&auto=0&height=66">
-        </iframe>
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        //fixed: true,
+        autoplay: false,
+        audio: [
+        {
+            name: "東京",
+            artist: '山崎あおい',
+            url: 'http://outayknla.bkt.clouddn.com/%E5%B1%B1%E5%B4%8E%E3%81%82%E3%81%8A%E3%81%84%20-%20%E6%9D%B1%E4%BA%AC.mp3',
+            cover: 'http://outayknla.bkt.clouddn.com/webwxgetmsgimg.jpg',
+        },
+        {
+            name: '서쪽 하늘',
+            artist: '李承哲',
+            url: 'http://outayknla.bkt.clouddn.com/Lee_Seung_Chul_The_Western_Sky.mp3',
+            cover: 'http://outayknla.bkt.clouddn.com/%E8%A5%BF%E8%BE%B9%E5%A4%A9%E7%A9%BA.jpg',
+        }
+        ]
+    });
+</script> 
+         
+        </div>
         
          
 
@@ -476,55 +496,35 @@
                 </li>
               
             </ul>
-            <!--
-<div id="days"></div>
-</script>
-<script language="javascript">
-function show_date_time(){
-    window.setTimeout("show_date_time()", 1000);
-    BirthDay=new Date("08/20/2018 6:00:00");
-    today=new Date();
-    timeold=(today.getTime()-BirthDay.getTime());
-    sectimeold=timeold/1000
-    secondsold=Math.floor(sectimeold);
-    msPerDay=24*60*60*1000
-    e_daysold=timeold/msPerDay
-    daysold=Math.floor(e_daysold);
-    e_hrsold=(e_daysold-daysold)*24;
-    hrsold=setzero(Math.floor(e_hrsold));
-    e_minsold=(e_hrsold-hrsold)*60;
-    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
-    seconds=setzero(Math.floor((e_minsold-minsold)*60));
-    document.getElementById('days').innerHTML=today;
-}
-function setzero(i){
-    if (i<10)
-    {i="0" + i};
-    return i;
-}
-show_date_time();
-</script>
--->
+            
+            <div style = "margin-top: 20px">
+              
+              <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+              <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+              <div class="widget-wrap">
+              <div class="links-of-blogroll-title">
+                <i class="fa fa-tags"></i>
+                Tag Cloud&nbsp;
+              </div>
+              <div id="myCanvasContainer" class="widget tagcloud">
+                  <canvas width="220" height="220" id="resCanvas" style="width=100%">
+                      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stat-ML/">Stat ML</a><span class="tag-list-count">1</span></li></ul>
+                  </canvas>
+              </div>
+              </div>
+                
+            </div>
           </div>
+
+          <!--tagscloud-->
+
                   
 
       </section>
 
-      
+       
 
       
-      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-      <div class="widget-wrap">
-      <h5 class="widget-title">Tag Cloud</h5>
-      <div id="myCanvasContainer" class="widget tagcloud">
-          <canvas width="220" height="220" id="resCanvas" style="width=100%">
-              <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">1</span></li></ul>
-          </canvas>
-      </div>
-      </div>
-        
-
 
       
 
@@ -571,7 +571,7 @@ show_date_time();
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
 
 
 
@@ -729,30 +729,6 @@ show_date_time();
 
     
 
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname, 
-            owner: 'Asmire',
-            repo: 'asmire.github.io',
-            
-            lang: "en" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: '52acbd20e1f49f1eb0ca0d3c23c88754cc73ee51',
-            
-                client_id: '45099e71bb832144cd03'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
     
 
 
@@ -1085,6 +1061,113 @@ show_date_time();
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("kigDA9lpNLhj24IoKRJqYz0C-gzGzoHsz", "GYv6qVSzLmqLoeNxxAg9HJPa");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
