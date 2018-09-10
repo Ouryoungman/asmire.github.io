@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hyouka">
 <meta property="og:description" content="简介约瑟夫问题： 据说著名犹太历史学家 Josephus有过以下的故事：在罗马人占领乔塔帕特后，39 个犹太人与Josephus及他的朋友躲到一个洞中，39个犹太人决定宁愿死也不要被敌人抓到，于是决定了一个自杀方式，41个人排成一个圆圈，由第1个人开始报数，每报数到第3人该人就必须自杀，然后再由下一个重新报数，直到所有人都自杀身亡为止。然而Josephus 和他的朋友并不想遵从。首先从一个人开始，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-09T08:52:30.984Z">
+<meta property="og:updated_time" content="2018-09-10T00:12:18.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Josephus Problem">
 <meta name="twitter:description" content="简介约瑟夫问题： 据说著名犹太历史学家 Josephus有过以下的故事：在罗马人占领乔塔帕特后，39 个犹太人与Josephus及他的朋友躲到一个洞中，39个犹太人决定宁愿死也不要被敌人抓到，于是决定了一个自杀方式，41个人排成一个圆圈，由第1个人开始报数，每报数到第3人该人就必须自杀，然后再由下一个重新报数，直到所有人都自杀身亡为止。然而Josephus 和他的朋友并不想遵从。首先从一个人开始，">
@@ -425,7 +425,7 @@
 <p>n个人围成一圈，从围成标记号为1到n的圆圈的n个人开始，每隔一个删去一个人，直到只有一个人幸存下来。求确定幸存者的号码 $J(n)$</p>
 <h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><p>不妨从奇偶性开始考虑<br>当$n$为偶数时，我们考虑 $J(2n)$的情况。第一轮后，还剩下n个人。此时发现编号符合映射:$x \rightarrow y = 2x-1$,可得到 $J(2n) = 2J(n)-1$<br>同理，当$n$为奇数时,我们考虑 $J(2n+1)$的情况，此时可得：$J(2n+1)=2J(n)+1$</p>
 <p>故定义$J$的递归式为：</p>
-<script type="math/tex; mode=display">J(1) = 1</script><script type="math/tex; mode=display">J(2n) = 2J(n)-1, n\geq1</script><script type="math/tex; mode=display">J(2n+1) = 2J(n) + 1,n\geq1</script><h4 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h4><p>通过递归式，我们可以观察解从而将递归式转化为封闭形式的解。</p>
+<script type="math/tex; mode=display">J(1) = 1</script><script type="math/tex; mode=display">J(2n) = 2J(n)-1, n\geq1</script><script type="math/tex; mode=display">J(2n+1) = 2J(n) + 1,n\geq1</script><h4 id="封闭形式"><a href="#封闭形式" class="headerlink" title="封闭形式"></a>封闭形式</h4><p>通过递归式，我们可以观察解从而将递归式转化为封闭形式的解。</p>
 <div class="table-container">
 <table>
 <thead>
@@ -475,7 +475,10 @@
 <p>通过观察，如果我们将$n$写成$n=2^m+l$,则递归式解为：</p>
 <script type="math/tex; mode=display">J(2^m+l) = 2l+1, m\geq0, 0\leq l < 2^m.</script><p>约束条件为：</p>
 <script type="math/tex; mode=display">2^m\leq n\leq 2^{m+1}</script><p>证明可用数学归纳法证明，此处略。</p>
-
+<h4 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h4><p>通过求解封闭形式，我们发现2的幂起着重要作用。于是研究以2为基数的表示方法。<br>假设n的二进制展开式为${(b{_m}b_{m-1}b_{m-2}\cdots b_1b_0)}_2$，b取0或1，$b_m$=1.<br>我们依次可得：</p>
+<script type="math/tex; mode=display">n={(1b_{m-1}b_{m-2}\cdots b_1b_0)}_2</script><script type="math/tex; mode=display">l={(0b_{m-1}b_{m-2}\cdots b_1b_0)}_2</script><script type="math/tex; mode=display">2l={(b_{m-1}b_{m-2}\cdots b_1b_00)}_2</script><script type="math/tex; mode=display">2l+1={(b_{m-1}b_{m-2}\cdots b_1b_01)}_2</script><script type="math/tex; mode=display">J(n)={(b_{m-1}b_{m-2}\cdots b_1b_0b_m)}_2</script><p>二进制下即可数位循环移动得到最终解。</p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><h4 id="不动点"><a href="#不动点" class="headerlink" title="不动点"></a>不动点</h4><p>若对$J(n)$不断迭代，则最后会达到一个不动点，在该点有$J(n)=n$.<br>设$J(n)$二进制中有k个1,则不断迭代后，$n=2^{k}-1$,</p>
+<h4 id="通解解法"><a href="#通解解法" class="headerlink" title="通解解法"></a>通解解法</h4>
       
     </div>
     
@@ -783,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归"><span class="nav-number">2.1.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进制"><span class="nav-number">2.2.</span> <span class="nav-text">进制</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归"><span class="nav-number">2.1.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封闭形式"><span class="nav-number">2.2.</span> <span class="nav-text">封闭形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进制"><span class="nav-number">2.3.</span> <span class="nav-text">进制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">3.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不动点"><span class="nav-number">3.1.</span> <span class="nav-text">不动点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通解解法"><span class="nav-number">3.2.</span> <span class="nav-text">通解解法</span></a></li></ol></li></ol></div>
             
 
           </div>
