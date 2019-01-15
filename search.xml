@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python3 + Selenium + ChromeDriver 初探]]></title>
+    <url>%2F2019%2F01%2F15%2Fselenium%2F</url>
+    <content type="text"><![CDATA[简介Selenium是一个用于Web应用程序测试的工具。它直接运行在浏览器中，就像真正的用户在操作一样。运用这种特性，可以用于简单爬虫。 配置环境ChromeDriver下载相应版本的ChromeDriver，版本对应请看文件夹里面的note.txt文件。 Selenium1sudo pip3 install Selenium 模拟登录实现12345678910111213141516171819202122232425262728293031323334353637383940from selenium import webdriverimport osimport csvimport timeID = ""PASSWORD = ""chromedriver = "../Chrome_Driver/2.40/chromedriver"os.environ["webdriver.chrome.driver"] = chromedriverdriver = webdriver.Chrome(chromedriver)driver.get("http://jwxt.zufe.edu.cn/jwglxt/xtgl/login_slogin.html?language=zh_CN&amp;_t=1547536545893")inputID = driver.find_element_by_id("yhm")inputPASSWORD = driver.find_element_by_id("mm")clickButton = driver.find_element_by_id("dl")inputID.clear()inputPASSWORD.clear()inputID.send_keys(ID)inputPASSWORD.send_keys(PASSWORD)clickButton.click()driver.get("http://jwxt.zufe.edu.cn/jwglxt/cjcx/cjcx_cxDgXscj.html?gnmkdm=N305005&amp;layout=default&amp;su=%s" %ID)time.sleep(10)driver.find_element_by_id("search_go").click()table_rows = driver.find_element_by_tag_name("tbody").find_elements_by_tag_name("tr")rowsLen = len(table_rows)CSVPATH = "../Data/Score.csv"with open(CSVPATH,'w') as f: csv_write = csv.writer(f) csv_head = ["学年","学期","课程编号","课程名","课程类型","学分","成绩"] csv_write.writerow(csv_head) for i in range(1,rowsLen): csv_write.writerow(table_rows[i].text.split(" ")[1:8]) Socks Proxy12345678910111213141516from selenium import webdriverPORT = 1088chrome_options = webdriver.ChromeOptions()chrome_options.add_argument('--proxy-server=socks5://localhost:%s' %PORT)browser = webdriver.Chrome(chrome_options=chrome_options, executable_path='../Chrome_Driver/2.40/chromedriver')proxy.new_har('youtube')browser.get('http://www.google.com')browser.find_element_by_name("q")inputContent = browser.find_element_by_name("q")inputContent.clear()inputContent.send_keys("asmire.site")submit = browser.find_elements_by_name("btnK")submit[-1].click() 即可访问外网。]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[学习资料整合(不断更新)]]></title>
     <url>%2F2018%2F09%2F12%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%2F</url>
     <content type="text"><![CDATA[符号标识： 完成 在做 未完成 √ - × 教材 机器学习原本在读的是&lt;&lt;机器学习实战&gt;&gt;，每一章都做一个归纳和总结。结果在github上找到了各章节负责人的总结。作为参考,如果有补充的,就做归纳和总结。 统计机器学习 - 西瓜书 - 机器学习实战 - 花书 × 深度学习入门 × tensorflow实战 × Andrew ng 视频 × 机器学习入门 - Kaggle × 数学概率 概率导论 - 应用随机过程 × 代数 代数学引论 代数学引论(一) × 代数学引论(二) × 代数学引论(三) × 北大高代 × 高数 数学分析八讲 × 吉米多维奇习题集 吉米多维奇习题集(一) × 吉米多维奇习题集(二) × 吉米多维奇习题集(三) × 吉米多维奇习题集(四) × 吉米多维奇习题集(五) × 吉米多维奇习题集(六) × 网络安全 34个信息安全项目]]></content>
