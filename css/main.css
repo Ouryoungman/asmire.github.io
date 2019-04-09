@@ -1859,7 +1859,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffe5;
+  background: #731aa3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3316,10 +3316,10 @@ pre .javascript .function {
   }
 }
 * {
-  cursor: url("http://outayknla.bkt.clouddn.com/sailboat.ico"), auto !important;
+  cursor: url("http://asmire.oss-cn-hangzhou.aliyuncs.com/sailboat.ico"), auto !important;
 }
 :active {
-  cursor: url("http://outayknla.bkt.clouddn.com/sailboat1.ico"), auto !important;
+  cursor: url("http://asmire.oss-cn-hangzhou.aliyuncs.com/sailboat2.ico"), auto !important;
 }
 body {
   background-image: url("/images/background.png");
