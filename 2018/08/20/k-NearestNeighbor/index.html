@@ -1008,26 +1008,46 @@
 
 
 
-     
-     
-     
-     
-     <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css">
-     <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
-     
-         <script type="text/javascript">
-             var gitment = new Gitment({
-                 id: document.location.href, 
-                 owner: '',
-                 repo: '',
-                 oauth: {
-                     client_id: '',
-                     client_secret: ''
-                 }});
-             gitment.render('gitment-container');
-         </script>
-     
- 
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="http://asmire.oss-cn-hangzhou.aliyuncs.com/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'Asmire',
+            repo: 'asmire.github.io',
+            
+            lang: "en" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '52acbd20e1f49f1eb0ca0d3c23c88754cc73ee51',
+            
+                client_id: '45099e71bb832144cd03'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
 
 
 
