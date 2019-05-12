@@ -81,29 +81,18 @@
 
 
 
-<meta name="description" content="深入理解计算机系统CH-1 源程序源程序实际上由0和1组成的位（又称比特序列）序列，这些位被组织成8个一组，称为字节。每个字节都表示程序中某个文本字符。大部分现代系统都使用ASCII标准来表示文本字符。 基本思想：系统中所有的信息————包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据，都是由一串比特表示的。区分不同数据对象的唯一方法是我们读到这些数据对象时的上下文。比如，">
+<meta name="description" content="深入理解计算机系统CH-1">
 <meta name="keywords" content="Computer System">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解计算机系统CH-01">
 <meta property="og:url" content="http://yoursite.com/2019/05/12/深入理解计算机系统CH01/index.html">
 <meta property="og:site_name" content="Hyouka">
-<meta property="og:description" content="深入理解计算机系统CH-1 源程序源程序实际上由0和1组成的位（又称比特序列）序列，这些位被组织成8个一组，称为字节。每个字节都表示程序中某个文本字符。大部分现代系统都使用ASCII标准来表示文本字符。 基本思想：系统中所有的信息————包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据，都是由一串比特表示的。区分不同数据对象的唯一方法是我们读到这些数据对象时的上下文。比如，">
+<meta property="og:description" content="深入理解计算机系统CH-1">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/01.png?token=AGXKCE2S4MFZNJWTL2RFIVK427AV4">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/02.png?token=AGXKCE742Q4YMFPZTNPBENS427AUY">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/03.png?token=AGXKCE24YWVHH4S6I4QAZ2C427AYU">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/04.png?token=AGXKCEZXASL5BOR7X3EPJLK427A5Y">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/05.png?token=AGXKCE2EPCU3LG4WUDTWP3C427BDQ">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/06.png?token=AGXKCE5FRFIVUITI3LAFIVS427BGC">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/07.png?token=AGXKCE5NLZVDUFCHSQQE2BK427BJI">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/08.png?token=AGXKCE3R247KPFEWFNJJUNK427BL4">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/09.png?token=AGXKCE22TO7OANFVIN4ND7K427BPA">
-<meta property="og:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/10.png?token=AGXKCE577JQWYNGRA4BQ7D2427BVA">
-<meta property="og:updated_time" content="2019-05-12T06:56:30.084Z">
+<meta property="og:updated_time" content="2019-05-12T07:02:57.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解计算机系统CH-01">
-<meta name="twitter:description" content="深入理解计算机系统CH-1 源程序源程序实际上由0和1组成的位（又称比特序列）序列，这些位被组织成8个一组，称为字节。每个字节都表示程序中某个文本字符。大部分现代系统都使用ASCII标准来表示文本字符。 基本思想：系统中所有的信息————包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据，都是由一串比特表示的。区分不同数据对象的唯一方法是我们读到这些数据对象时的上下文。比如，">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer's_Perspective/ch1/01.png?token=AGXKCE2S4MFZNJWTL2RFIVK427AV4">
+<meta name="twitter:description" content="深入理解计算机系统CH-1">
 
 
 
@@ -441,7 +430,7 @@
       
 
       
-        <h2 id="深入理解计算机系统CH-1"><a href="#深入理解计算机系统CH-1" class="headerlink" title="深入理解计算机系统CH-1"></a>深入理解计算机系统CH-1</h2><!--read more-->
+        <h2 id="深入理解计算机系统CH-1"><a href="#深入理解计算机系统CH-1" class="headerlink" title="深入理解计算机系统CH-1"></a>深入理解计算机系统CH-1</h2><a id="more"></a>
 <h4 id="源程序"><a href="#源程序" class="headerlink" title="源程序"></a>源程序</h4><p>源程序实际上由0和1组成的位（又称比特序列）序列，这些位被组织成8个一组，称为字节。每个字节都表示程序中某个文本字符。大部分现代系统都使用ASCII标准来表示文本字符。</p>
 <p>基本思想：系统中所有的信息————包括磁盘文件、存储器中的程序、存储器中存放的用户数据以及网络上传送的数据，都是由一串比特表示的。区分不同数据对象的唯一方法是我们读到这些数据对象时的上下文。比如，在不同的上下文中，同样的字节序列可能表示一个整数、浮点数、字符串或者机器指令。</p>
 <h4 id="编译系统"><a href="#编译系统" class="headerlink" title="编译系统"></a>编译系统</h4><p>执行四个阶段的程序（预处理器，编译器，汇编器和连接器）一起构成了编译系统</p>
@@ -451,7 +440,6 @@
 <li>汇编阶段：汇编器(as)将.s文件翻译成机器语言指令，把这些指令打包成为一种叫做可重定位(relocatable)目标程序的格式，并将结果保存在目标文件.o(二进制文件)中。</li>
 <li>链接阶段：链接器(ld)负责处理库中的函数以某种方式并入.o程序中，结果得到一个可执行目标文件。可执行文件加载到存储器，由系统负责执行。</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/01.png?token=AGXKCE2S4MFZNJWTL2RFIVK427AV4" alt="编译系统"></p>
 <h4 id="编译系统益处"><a href="#编译系统益处" class="headerlink" title="编译系统益处"></a>编译系统益处</h4><ul>
 <li>优化程序性能</li>
 <li>理解链接时出现的错误</li>
@@ -463,29 +451,19 @@
 <li>主存：主存是一个临时存储设备，在处理器执行程序时，它被用来存放程序和程序处理的数据。物理上来说，是由一组DRAM(动态随机存储器)芯片组成。逻辑上来说，存储器是由一个线性的字节数组组成的，每个字节都有唯一的地址(数组索引)，这些地址是从零开始的。</li>
 <li>处理器：中央处理单元(CPU)简称处理器，是解释(或执行)存储在主存中指令的引擎。处理器的核心是一个被称为程序计数器(PC)的字节大小的存储设备(或寄存器)。在任何一个时间点上，PC都指向主存中的某条机器语言指令(内含其地址)。</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/02.png?token=AGXKCE742Q4YMFPZTNPBENS427AUY" alt="典型系统硬件组成"></p>
 <h4 id="执行hello程序过程"><a href="#执行hello程序过程" class="headerlink" title="执行hello程序过程"></a>执行hello程序过程</h4><ul>
-<li>在键盘中输入./hello后，shell程序逐一读取字符至寄存器。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/03.png?token=AGXKCE24YWVHH4S6I4QAZ2C427AYU" alt="读取hello命令"></p>
-<ul>
+<li>在键盘中输入./hello后，shell逐一读取字符至寄存器。</li>
 <li>按回车后，结束命令输入，将hello目标文件中的代码与数据拷至主存，加载hello文件。数据包括输出字符串。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/04.png?token=AGXKCEZXASL5BOR7X3EPJLK427A5Y" alt="加载可执行文件到主存"></p>
-<ul>
 <li>加载完毕后，处理器执行主程序中的机器语言指令。这些指令将字符串中的字节从存储器中拷贝到寄存器文件，再从寄存器中文件拷贝到显示设备。</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/05.png?token=AGXKCE2EPCU3LG4WUDTWP3C427BDQ" alt="存储器写输出串到显示器"></p>
-<h4 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h4><p>针对处理器与主存存放字节数，读写速度以及运行速度的差异，系统设计者采用了更小更快的存储设备，称为高速缓存存储器(cache memories，简称高速缓存)<br><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/06.png?token=AGXKCE5FRFIVUITI3LAFIVS427BGC" alt="高速缓存"></p>
-<h4 id="存储设备的层次结构"><a href="#存储设备的层次结构" class="headerlink" title="存储设备的层次结构"></a>存储设备的层次结构</h4><p>实际上，每个计算机系统中的存储设备都被组织成一个存储器层次模型。其主要思想是一个层次上的存储器作为下一层次上的存储器的高速缓存。利用对整个存储器层次模型的理解，可以提高程序的性能<br><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/07.png?token=AGXKCE5NLZVDUFCHSQQE2BK427BJI" alt="存储设备的层次结构"></p>
+<h4 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h4><p>针对处理器与主存存放字节数，读写速度以及运行速度的差异，系统设计者采用了更小更快的存储设备，称为高速缓存存储器(cache memories，简称高速缓存)</p>
+<h4 id="存储设备的层次结构"><a href="#存储设备的层次结构" class="headerlink" title="存储设备的层次结构"></a>存储设备的层次结构</h4><p>实际上，每个计算机系统中的存储设备都被组织成一个存储器层次模型。其主要思想是一个层次上的存储器作为下一层次上的存储器的高速缓存。利用对整个存储器层次模型的理解，可以提高程序的性能</p>
 <h4 id="操作系统管理硬件"><a href="#操作系统管理硬件" class="headerlink" title="操作系统管理硬件"></a>操作系统管理硬件</h4><p>操作系统有两个基本功能：</p>
 <ul>
 <li>防止硬件被失控的应用程序滥用</li>
 <li>在控制复杂而又广泛不同的低级硬件设备方面，为应用程序提供简单一致的方法。</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/08.png?token=AGXKCE3R247KPFEWFNJJUNK427BL4" alt="计算机系统分层"></p>
 <p>操作系统通过几个基本的抽象概念(进程、虚拟存储器和文件)实现这两个功能。</p>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/09.png?token=AGXKCE22TO7OANFVIN4ND7K427BPA" alt="系统分层试图"></p>
 <p>其中文件是对I/O设备的抽象表示，虚拟存储器是对主存和磁盘I/O设备的抽象表示，进程则是对处理器、主存和I/O设备的抽象表示。</p>
 <h5 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h5><p>操作系统运行程序的一种抽象。一个系统上可以同时运行多个进程，称之为并发运行。</p>
 <p>实际上进程指令是交错执行的。操作系统实现交错执行的机制称为<strong>上下文切换</strong>(context switching)。</p>
@@ -500,7 +478,6 @@
 <li>栈：位于用户虚拟空间地址顶部，编译器用它来实现函数调用</li>
 <li>内核虚拟存储器：内核是操作系统总是驻留在存储器中的部分</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Asmire/blog_static/master/img/Computer_Systems_A_Programmer&#39;s_Perspective/ch1/10.png?token=AGXKCE577JQWYNGRA4BQ7D2427BVA" alt="进程的虚拟空间"></p>
 <h5 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h5><p>文件即是字节序列。</p>
 
       
